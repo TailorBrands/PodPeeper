@@ -19,7 +19,7 @@ jobs:
           images: |
             tailordevdockermachine/podPeeper
       
-      - name: Build and wihtout push Docker image
+      - name: Build and without push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
