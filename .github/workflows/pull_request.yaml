@@ -1,0 +1,28 @@
+name: Build Docker image
+
+on:
+  pull_request:
+    types: ["opened", "synchronize", "reopened"]
+
+jobs:
+  build_docker_image:
+    name: Build Docker image
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            tailordevdockermachine/podPeeper
+      
+      - name: Build and wihtout push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
