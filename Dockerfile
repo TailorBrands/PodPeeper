@@ -5,7 +5,6 @@ RUN apk update && apk add \
   postgresql-client \
   curl \
   nmap \
-  curl \
   netcat-openbsd \
   tcpdump \
   bind-tools \
