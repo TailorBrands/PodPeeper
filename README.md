@@ -14,6 +14,12 @@ kubectl run debug --rm -i --tty --image tailordevdockermachine/podpeeper:latest 
 
 This `kubectl` command will create a temporary pod named "debug" using the specified Docker image. It will allocate an interactive terminal and attach it to the pod, allowing you to use the included debugging tools directly within the Kubernetes environment. The pod will be automatically removed once you exit the debugging session.
 
+```bash
+kubectl debug -it $POD_NAME --image=tailordevdockermachine/podpeeper:latest --target=$SERVICE_NAME
+```
+
+This `kubectl` debug command adds a new container to an existing pod. Using the specified Docker image. it creates a temporary pod with an interactive terminal attached to it. This enables users to employ the debugging tools within the Kubernetes environment directly. Once the debugging session ends, the temporary pod is automatically removed, leaving the original pod unchanged and unaffected.
+
 ## Tools Included
 
 The Docker image is based on Alpine Linux 3.18.2 and comes pre-installed with the following debugging tools:
