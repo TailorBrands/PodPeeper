@@ -13,10 +13,8 @@ RUN apk update && apk add \
   bash-completion \
   && apk add --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache \
   grpcurl \
-  wget \
   vim \
   tmux \
-  unzip \
-  aws-cli 
+  aws-cli
 
 CMD ["/bin/bash"]
