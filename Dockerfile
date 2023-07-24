@@ -17,6 +17,7 @@ RUN apk update && apk add \
   wget \
   vim \
   tmux \
-  unzip
+  unzip \
+  aws-cli 
 
 CMD ["/bin/bash"]
