@@ -18,11 +18,10 @@ jobs:
         with:
           images: |
             tailordevdockermachine/podPeeper
-      
       - name: Build and without push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: false
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: tailordevdockermachine/podpeeper:${{ github.sha }}, tailordevdockermachine/podpeeper:latest
           labels: ${{ steps.meta.outputs.labels }}
