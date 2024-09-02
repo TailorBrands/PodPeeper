@@ -15,6 +15,10 @@ RUN apk update && apk add \
   grpcurl \
   vim \
   tmux \
-  aws-cli
+  aws-cli \
+  redis \
+  go 
+
+## Cilium 
 
 CMD ["/bin/bash"]
