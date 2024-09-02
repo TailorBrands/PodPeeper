@@ -27,8 +27,7 @@ RUN apk update && apk add \
   gzip \
   kubectl \
   screen \
-  bat \
-  && apk cache --purge
+  bat
 
 ENV EDITOR=nvim
 
