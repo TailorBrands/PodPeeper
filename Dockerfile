@@ -18,7 +18,19 @@ RUN apk update && apk add \
   tmux \
   aws-cli \
   redis \
-  go 
+  go \
+  ruby \
+  nodejs \
+  neovim \
+  git \
+  zip \
+  gzip \
+  kubectl \
+  screen \
+  bat \
+  && apk cache --purge
+
+ENV EDITOR=nvim
 
 ## Cilium 
 RUN CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt) && \
