@@ -22,22 +22,45 @@ This `kubectl` debug command adds a new container to an existing pod. Using the 
 
 ## Tools Included
 
-The Docker image is based on Alpine Linux 3.18.2 and comes pre-installed with the following debugging tools:
+The Docker image is based on Alpine Linux 3.23.0 and comes pre-installed with the following debugging tools:
 
+### Database & API
 - `postgresql-client`: PostgreSQL client for connecting to and interacting with PostgreSQL databases.
+- `redis`: Redis CLI for interacting with Redis instances.
+- `grpcurl`: Command-line tool for interacting with gRPC servers.
+
+### Network & DNS
 - `curl`: Command-line tool for making HTTP requests and transfers.
 - `nmap`: Network exploration tool and security scanner.
 - `netcat-openbsd`: Feature-rich networking utility for reading and writing data across network connections.
 - `tcpdump`: Packet analyzer that captures and inspects network traffic.
 - `bind-tools`: Set of DNS utilities, including `dig` and `nslookup`.
-- `jq`: Lightweight and flexible command-line JSON processor.
-- `bash`: GNU Bourne-Again SHell, a powerful command-line interpreter.
+
+### Kubernetes & Cloud
+- `kubectl`: Kubernetes CLI for cluster management.
+- `cilium`: Cilium CLI for network policy debugging.
+- `aws-cli`: AWS command-line interface.
+
+### Development & Languages
+- `go`: Go programming language.
+- `ruby`: Ruby programming language.
+- `nodejs`: Node.js runtime.
+- `git`: Version control system.
+
+### Editors & Terminal
+- `neovim`: Modern text editor (set as default `$EDITOR`).
+- `vim`: Feature-rich text editor.
+- `tmux`: Terminal multiplexer for managing multiple terminal sessions.
+- `screen`: Terminal multiplexer.
+- `bash`: GNU Bourne-Again SHell.
 - `bash-completion`: Bash tab completion support.
-- `grpcurl`: Command-line tool for interacting with gRPC servers.
-- `wget`: Command-line utility for downloading files from the web.
-- `vim`: Feature-rich text editor, ideal for quick file editing.
-- `tmux`: Terminal multiplexer for managing multiple terminal sessions within a single window.
-- `unzip`: Command-line utility for extracting ZIP archives.
+- `bat`: Cat clone with syntax highlighting.
+
+### Utilities
+- `jq`: Lightweight and flexible command-line JSON processor.
+- `tar`: Archive utility.
+- `zip` / `gzip`: Compression utilities.
+- `coreutils`: GNU core utilities.
 
 ## Getting Started
 
